@@ -32,7 +32,11 @@ var g = function() {
   if ($e.find('.EmbedSidecar li').length) {
     $e.find('.EmbedSidecar li').each(function(index, el) {
       setTimeout(function() {
-        add($(el).find('img').attr('src'));
+        if ($(el).find('img').length) {
+          add($(el).find('img').attr('src'));
+        } else {
+          add($(el).find('video').attr('src'));
+        }
         $e.find('.coreSpriteRightChevron').trigger('click');
       }, index * 50);
     });
@@ -69,8 +73,8 @@ var add = function(a) {
   var p=new RegExp(".mp4");
   console.log(a);
   if (p.test(a)) {
-    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top" alt="IG" controls></video><div class="card-body"><h5 class="card-title">點擊圖片下載</h5></div>`);
+    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top" alt="IG" controls></video><div class="card-body"><h5 class="card-title">點擊 <i class="fas fa-ellipsis-v"></i> 選 "下載" 來下載</h5></div>`);
   } else {
-    $("#r").append(`<div class="card p-2"><img class="card-img-top" src=${a} alt="IG"><div class="card-body"><h5 class="card-title">點擊圖片下載</h5></div>`);
+    $("#r").append(`<div class="card p-2"><img class="card-img-top" src=${a} alt="IG"><div class="card-body"><h5 class="card-title">(手機) 長按圖片選 "下載"、(電腦) 右鍵選將 "圖片另存為"  來下載</h5></div>`);
   }
 }

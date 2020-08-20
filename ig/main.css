@@ -32,6 +32,6 @@ html {
 #i{
   pointer-events: none;
 }
-#get,#f{
+#get{
   display: none;
 }
