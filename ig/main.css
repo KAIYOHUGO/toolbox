@@ -1,0 +1,38 @@
+body{
+  background-color: gray;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  animation-name: shark;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes shark {
+    0%{
+      background-position:0% 0%;
+    }
+
+    50%{
+      background-position:10% 10%;
+    }
+
+    100%{
+      background-position:0% 0%;
+    }
+
+}
+#i{
+  pointer-events: none;
+}
+#get,#f{
+  display: none;
+}
