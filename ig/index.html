@@ -71,23 +71,38 @@
     <h1 class="bg-info text-light rounded p-3">IG 圖片+影片下載器</h1>
   </div>
 
-  <div class="d-flex justify-content-center m-5">
-    <div class="bg-light p-5 border rounded col-md-5 animate__animated animate__faster" id="form">
-      <div class="form-group ">
-        <label for="iglk">IG 貼文網址</label>
-        <input type="url" class="form-control form-control-lg" id="iglk" aria-describedby="Helplk" placeholder="https://www.instagram.com/p/CEAunh_sKji/">
-        <small id="Helplk" class="form-text text-muted">我們不會收集你的搜尋資料</small>
-      </div>
-      <button type="submit" class="btn btn-primary m-1" id="load">載入 <span aria-hidden="true">&raquo;</span></button>
-      <button type="submit" class="btn btn-success m-1" id="get">讀取 <span aria-hidden="true">&raquo;</span></button>
 
+  <form class="m-5">
+    <div class="form-row justify-content-center">
+      <div class="col-lg-6 bg-light p-5 border rounded animate__animated animate__faster " id="form">
+        <div class="form-group">
+          <label for="iglk">IG 貼文網址</label>
+          <input type="url" class="form-control form-control-lg" id="iglk" aria-describedby="Helplk" placeholder="https://www.instagram.com/p/CEAunh_sKji/">
+          <small id="Helplk" class="form-text text-muted">我們不會收集你的搜尋資料</small>
+        </div>
+        <button type="button" class="btn btn-primary m-1" id="load">載入 <span aria-hidden="true">&raquo;</span></button>
+        <button type="button" class="btn btn-success m-1" id="get">讀取 <span aria-hidden="true">&raquo;</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-columns m-5" id="r">
+
+
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+  <div class="card-columns m-5 col-md-12" id="r">
   </div>
 
   <div class="d-flex justify-content-center" id="f">
-    <div class="embed-responsive col-md-5 embed-responsive-1by1 border rounded m-5 p-3 bg-light">
+    <div class="embed-responsive col-12 col-md-5 embed-responsive-1by1 border rounded m-5 p-3 bg-light">
       <iframe src="ig.html" id="i" class="embed-responsive-item d-block">
         你的瀏覽器不支援 iframe，試試其他的瀏覽器
       </iframe>
@@ -99,8 +114,10 @@
       <i class="fas fa-arrow-up"></i>
     </a>
   </div>
-
-  <footer class="container-fluid navbar navbar-bottom bg-light">
+  <div class="m-5">
+    HAHA 被你找到了!
+  </div>
+  <footer class="navbar navbar-bottom bg-light fixed-bottom">
     <div>
       <section>
         <small>
