@@ -116,8 +116,8 @@ var d = function() {
 
 var add = function(a, v) {
   if (v) {
-    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top dl" alt="IG"></video><div class="card-body"><h5 class="card-title">點擊 <strong>影片</strong> 來下載</h5></div>`);
+    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top dl" alt="IG"></video><div class="card-body"><h5 class="card-title text-center">點擊 <strong>影片</strong> 來下載</h5></div>`);
   } else {
-    $("#r").append(`<div class="card p-2"><img class="card-img-top dl" src=${a} alt="IG"><div class="card-body"><h5 class="card-title">點擊 <strong>圖片</strong> 來下載</h5></div>`);
+    $("#r").append(`<div class="card p-2"><img class="card-img-top dl" src=${a} alt="IG"><div class="card-body"><h5 class="card-title text-center">點擊 <strong>圖片</strong> 來下載</h5></div>`);
   }
 }
