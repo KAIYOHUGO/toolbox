@@ -1,37 +1,53 @@
-body{
-  background-color: gray;
-  background-image: url("bg.jpg");
+body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
-  animation-name: shark;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-@keyframes shark {
-    0%{
-      background-position:0% 0%;
-    }
-
-    50%{
-      background-position:10% 10%;
-    }
-
-    100%{
-      background-position:0% 0%;
-    }
-
+#m {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url("bg.jpg");
+  animation-name: shark;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  height: 100vh;
 }
-#i{
+
+.dl {
+  cursor: pointer;
+}
+
+svg.rwd{
+  width: 100% !important;
+  height: auto;
+}
+
+@keyframes shark {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 10% 10%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+#i {
   pointer-events: none;
 }
-#get{
+
+#get {
   display: none;
 }

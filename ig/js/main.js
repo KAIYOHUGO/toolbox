@@ -1,17 +1,23 @@
 $(function() {
+  location.hash = "top";
   $("#load").on('click', function() {
-    $("#get").hide('fast', function() {
-      load_r($("#iglk").val());
-    });
+    location.hash = "";
+    $("#r").html("");
+    gt();
 
   });
-  $("#get").on('click', function() {
-    $("#get").hide('fast', function() {
-      g();
-    });
-  });
+
 });
 
+/*
+$("#get").on('click', function() {
+  $("#get").hide('fast', function() {
+    g();
+  });
+});
+*/
+
+/*
 var $e = $("#i").contents();
 var load_r = function(l) {
   try {
@@ -53,6 +59,42 @@ var g = function() {
   }
 
 }
+*/
+var gt = function() {
+  iggeter({
+    "link": $("#iglk").val()
+  }, function(r) {
+    if (r) {
+      if (r.multi.length) {
+        $.each(r.multi, function(index, el) {
+          add(el[0], el[1]);
+        });
+        dl();
+      } else if (r.display.length) {
+        $.each(r.display, function(index, el) {
+          add(el[0], el[1]);
+        });
+        dl();
+      } else {
+        console.log("1");
+        f();
+      }
+    } else {
+      console.log("2");
+      f();
+    }
+  }, f);
+}
+
+
+var dl = function() {
+  location.hash = "r";
+  $(".dl").on('click', function(event) {
+    event.preventDefault();
+    var f = $(this).attr('src');
+    download(f, "GET", "IGGETER-" + f.replace(/\?.*/g, ""));
+  });
+}
 
 var f = function() {
   $("#form").addClass(["border-danger", "animate__shakeX"]);
@@ -69,12 +111,10 @@ var d = function() {
   $("#get").show('fast');
 }
 
-var add = function(a) {
-  var p=new RegExp(".mp4");
-  console.log(a);
-  if (p.test(a)) {
-    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top" alt="IG" controls></video><div class="card-body"><h5 class="card-title">點擊 <i class="fas fa-ellipsis-v"></i> 選 "下載" 來下載</h5></div>`);
+var add = function(a, v) {
+  if (v) {
+    $("#r").append(`<div class="card p-2"><video src=${a} class="card-img-top dl" alt="IG"></video><div class="card-body"><h5 class="card-title">點擊 <strong>影片</strong> 來下載</h5></div>`);
   } else {
-    $("#r").append(`<div class="card p-2"><img class="card-img-top" src=${a} alt="IG"><div class="card-body"><h5 class="card-title">(手機) 長按圖片選 "下載"、(電腦) 右鍵選將 "圖片另存為"  來下載</h5></div>`);
+    $("#r").append(`<div class="card p-2"><img class="card-img-top dl" src=${a} alt="IG"><div class="card-body"><h5 class="card-title">點擊 <strong>圖片</strong> 來下載</h5></div>`);
   }
 }
