@@ -1,3 +1,7 @@
+.h {
+  overflow: hidden;
+}
+
 body {
   background-repeat: no-repeat;
   background-position: center;
@@ -10,6 +14,7 @@ html {
 }
 
 #m {
+  overflow: visible;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -25,7 +30,7 @@ html {
   cursor: pointer;
 }
 
-svg.rwd{
+svg.rwd {
   width: 100% !important;
   height: auto;
 }

@@ -1,5 +1,8 @@
 $(function() {
   location.hash = "top";
+  AOS.init({
+    offset: 200
+  });
   $("#load").on('click', function() {
     location.hash = "";
     $("#r").html("");
