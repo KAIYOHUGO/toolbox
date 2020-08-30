@@ -3,9 +3,6 @@ $(function() {
   AOS.init({
     offset: 200
   });
-  // CODELAB: Register service worker.
-  const el = document.createElement('pwa-update');
-  document.body.appendChild(el);
 
   $("#load").on('click', function() {
     location.hash = "";
