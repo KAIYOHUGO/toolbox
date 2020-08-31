@@ -2,10 +2,11 @@
   "name": "IG GETER  免費 IG 圖片影片下載器",
   "short_name": "IG GETER",
   "description": "IG GETER  免費 IG 圖片影片下載器 MADE BY KAIYO HUGO COPYRIGHT © 2020",
-  "start_url": "https://tool.functionxyz.eu.org/ig/zh_tw/?utm_source=pwa",
+  "start_url": "https://tool.functionxyz.eu.org/ig/zh_tw/?utm_source=pwa&utm_medium=install&utm_campaign=iggeter",
   "display": "standalone",
   "lang": "zh-Hant-TW",
-  "background_color": "#dd73f5",
+  "background_color": "#efbefa",
+  "theme_color": "#dd73f5"
   "scope":"https://tool.functionxyz.eu.org/ig/zh_tw/",
   "icons": [{
       "src": "/ig/icon/android-icon-36x36.png",
