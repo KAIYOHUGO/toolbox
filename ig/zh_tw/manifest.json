@@ -7,6 +7,7 @@
   "lang": "zh-Hant-TW",
   "background_color": "#efbefa",
   "theme_color": "#dd73f5",
+  "orientation": "any",
   "scope":"https://tool.functionxyz.eu.org/ig/zh_tw/",
   "icons": [{
       "src": "/ig/icon/android-icon-36x36.png",
